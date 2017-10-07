@@ -100,6 +100,14 @@ $deep_gray: rgba(73, 73, 73, 1.00);
     width: 100%;
     height: 75px;
 
+    @include range-width(421px, 641px) {
+      height: 60px;
+    }
+
+    @include range-width(0, 421px) {
+      height: 40px;
+    }
+
     .m_btn_close, .m_btn_hand, .m_btn_back {
       display: inline-block;
       color: white;
@@ -114,11 +122,32 @@ $deep_gray: rgba(73, 73, 73, 1.00);
     .m_btn_close, .m_btn_back {
       width: 75px;
       height: 75px;
+      line-height: 70px;
+
+      @include range-width(421px, 641px) {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+      }
+
+      @include range-width(0, 421px) {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
     }
 
     .m_btn_close {
       float: left;
       font-size: 4.4rem;
+
+      @include range-width(421px, 641px) {
+        font-size: 3.5rem;
+      }
+
+      @include range-width(0, 421px) {
+        font-size: 2rem;
+      }
     }
 
     .m_btn_hand {
@@ -129,17 +158,51 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       @include border-radius(40px);
       font-size: 2.5rem;
       line-height: 60px;
+
+      @include range-width(421px, 641px) {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+      }
+
+      @include range-width(0, 421px) {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1rem;
+        margin: 5px 0 0 30px; 
+      }
     }
 
     .m_btn_back {
       float: right;
       font-size: 3rem;
+
+      @include range-width(421px, 641px) {
+        font-size: 2.2rem;
+      }
+
+      @include range-width(0, 421px) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   .m_cent_boxs {
+    @include range-width(421px, 641px) {
+      height: calc(100% - 60px - 60px);
+      padding: 20px;
+    }
+
+    @include range-width(0, 421px) {
+      height: calc(100% - 40px - 45px);
+      padding: 15px;
+    }
+
     display: inline-block;
     width: 100%;
+    // 最後面75=25+25+25
     height: calc(100% - 75px - 75px);
     padding: 25px;
 
@@ -157,6 +220,18 @@ $deep_gray: rgba(73, 73, 73, 1.00);
         color: white;
         font-size: 2.5rem;
         line-height: 100px;
+
+        @include range-width(421px, 641px) {
+          height: 80px;
+          line-height: 80px;
+          font-size: 1.5rem;
+        }
+
+        @include range-width(0, 421px) {
+          height: 40px;
+          line-height: 40px;
+          font-size: 1.2rem;
+        }
       }
     }
   }
