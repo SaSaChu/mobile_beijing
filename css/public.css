@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+@font-face {
+  font-family: "Monaco";
+  src: url('/beijing/font/monaco/monaco.ttf?1470839577') format('truetype'), url('/beijing/font/monaco/monaco.otf?1470839577') format('opentype');
+}
+@font-face {
+  font-family: "icomoon";
+  src: url('/beijing/font/icomoon/icomoon.eot?1507361416') format('embedded-opentype'), url('/beijing/font/icomoon/icomoon.woff?1507361416') format('woff'), url('/beijing/font/icomoon/icomoon.ttf?1507361416') format('truetype'), url('/beijing/font/icomoon/icomoon.svg?1507361416') format('svg');
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+*, *:after, *:before {
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+*::-moz-selection, *:after::-moz-selection, *:before::-moz-selection {
+  color: white;
+  background-color: #96c8ff;
+}
+*::selection, *:after::selection, *:before::selection {
+  color: white;
+  background-color: #96c8ff;
+}
+
+.icon-reload:before {
+  content: "\e906";
+}
+
+.icon-hand:before {
+  content: "\e905";
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+
+.icon-chevron-left:before {
+  content: "\e901";
+}
+
+.icon-chevron-right:before {
+  content: "\e902";
+}
+
+.icon-chevron-up:before {
+  content: "\e903";
+}
+
+.icon-close:before {
+  content: "\e5cd";
+}
+
+.icon-dehaze:before {
+  content: "\e3c7";
+}
+
+.icon-dash:before {
+  content: "\f0ca";
+}
+
+.icon-plus:before {
+  content: "\f05d";
+}
+
+.icon-search:before {
+  content: "\e904";
+}
+
+html {
+  height: 100%;
+}
+html body {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  /* 1*12px=12px */
+  font-family: "微軟正黑體", Monaco, "Microsoft JhengHei";
+  color: rgba(50, 50, 50, 0.8);
+  background-image: url(../img/m_bg.jpg);
+  background-size: cover;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+#m_out_boxs {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+}
+#m_out_boxs .m_top_boxs {
+  display: inline-block;
+  width: 100%;
+  height: 75px;
+}
+#m_out_boxs .m_top_boxs .m_btn_close, #m_out_boxs .m_top_boxs .m_btn_hand, #m_out_boxs .m_top_boxs .m_btn_back {
+  display: inline-block;
+  color: white;
+  background-color: #494949;
+  cursor: pointer;
+}
+#m_out_boxs .m_top_boxs .m_btn_close:hover, #m_out_boxs .m_top_boxs .m_btn_close:active, #m_out_boxs .m_top_boxs .m_btn_hand:hover, #m_out_boxs .m_top_boxs .m_btn_hand:active, #m_out_boxs .m_top_boxs .m_btn_back:hover, #m_out_boxs .m_top_boxs .m_btn_back:active {
+  background-color: #1e3150;
+}
+#m_out_boxs .m_top_boxs .m_btn_close, #m_out_boxs .m_top_boxs .m_btn_back {
+  width: 75px;
+  height: 75px;
+}
+#m_out_boxs .m_top_boxs .m_btn_close {
+  float: left;
+  font-size: 4.4rem;
+}
+#m_out_boxs .m_top_boxs .m_btn_hand {
+  width: 65px;
+  height: 65px;
+  float: left;
+  margin: 10px 0 0 60px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font-size: 2.5rem;
+  line-height: 60px;
+}
+#m_out_boxs .m_top_boxs .m_btn_back {
+  float: right;
+  font-size: 3rem;
+}
+#m_out_boxs .m_cent_boxs {
+  display: inline-block;
+  width: 100%;
+  height: calc(100% - 75px - 75px);
+  padding: 25px;
+}
+#m_out_boxs .m_cent_boxs .m_cent_box {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+#m_out_boxs .m_cent_boxs .m_cent_box .m_title_boxs {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  background-color: #1e3150;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 100px;
+}

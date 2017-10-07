@@ -1,0 +1,30 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+$light_blue: rgba(13, 92, 163, 1.00);
+$deep_blue: rgba(30, 49, 80, 1.00);
+$light_gray: rgba(232, 232, 232, 1.00);
+
+// 內容左邊css
+
+
+//內容右邊css 
+.top_box {
+
+  @include range-width(769px, 1240px) {
+    font-size: 1.5rem;
+  }
+
+  display: inline-block;
+  width: 100%;
+  height: 65px;
+  background-color: $deep_blue;
+  font-size: 2rem;
+  line-height: 65px;
+  color: white;
+}
+
