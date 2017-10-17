@@ -136,412 +136,345 @@ $deep_gray: rgba(73, 73, 73, 1.00);
 $cent_gray: rgba(150, 150, 150, 1.00);
 
 
-#m_out_boxs {
+#out_boxs {
   display: inline-block;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  margin:0 auto;
+  @include clearfix();
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
 
-  .m_top_boxs {
+  // 最上面
+  .top_boxs {
     display: inline-block;
     width: 100%;
-    height: 75px;
+    height: 35px;
     @include clearfix();
 
-    @include range-width(500px, 769px) {
-      height: 65px;
+    + * {
+      height: calc(100% - 40px);
     }
 
-    @include range-width(321px, 500px) {
-      height: 55px;
-    }
-
-    @include range-width(0, 321px) {
-      height: 45px;
-    }
-
-    .m_btn_close, .m_btn_hand, .m_btn_back {
+    .top_L, .top_R {
       display: inline-block;
-      color: white;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
       background-color: $deep_gray;
-      cursor: pointer;
+      color: white;
+      text-decoration: none;
 
       &:active {
         background-color: rgba(160, 160, 160, 1.00);
       }
     }
 
-    .m_btn_close, .m_btn_back {
-      width: 75px;
-      height: 75px;
-      line-height: 70px;
-
-      @include range-width(500px, 769px) {
-        width: 65px;
-        height: 65px;
-        line-height: 60px;
-      }
-
-      @include range-width(321px, 500px) {
-        width: 55px;
-        height: 55px;
-        line-height: 50px;
-      }
-
-      @include range-width(0, 321px) {
-        width: 45px;
-        height: 45px;
-        line-height: 40px;
-      }
-    }
-
-    .m_btn_close {
+    .top_L {
       float: left;
-      font-size: 4.4rem;
-
-      @include range-width(500px, 769px) {
-        font-size: 3.4rem;
-      }
-
-      @include range-width(321px, 500px) {
-        font-size: 3.0rem;
-      }
-
-      @include range-width(0, 321px) {
-        font-size: 2.2rem;
-      }
+      font-size: 2rem;
     }
 
-    .m_btn_hand {
-      width: 65px;
-      height: 65px;
-      float: left;
-      margin: 10px 0 0 30px; 
-      @include border-radius(40px);
-      font-size: 2.5rem;
-      line-height: 60px;
-
-      @include range-width(500px, 769px) {
-        width: 55px;
-        height: 55px;
-        font-size: 2.0rem;
-        line-height: 50px;
-        margin: 10px 0 0 20px; 
-      }
-
-      @include range-width(321px, 500px) {
-        width: 45px;
-        height: 45px;
-        font-size: 2rem;
-        line-height: 40px;
-        margin: 10px 0 0 15px; 
-      }
-
-      @include range-width(0, 321px) {
-        width: 35px;
-        height: 35px;
-        font-size: 1.5rem;
-        line-height: 30px;
-        margin: 10px 0 0 10px; 
-      }
-    }
-
-    .m_btn_back {
+    .top_R {
       float: right;
-      font-size: 3rem;
+      font-size: 1.3rem;
+    }
 
-      @include range-width(500px, 769px) {
-        font-size: 2.5rem;
+    .top_mil {
+      display: inline-block;
+      width: calc(100% - 70px);
+      padding: 5px 15px 0 15px;
+      @include clearfix();
+
+      .top_btn_boxs {
+        display: inline-block;
+        float: left;
+        @include clearfix();
+
+        > a {
+          display: inline-block;
+          float: left;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          @include border-radius(15px);
+          background-color: $deep_gray;
+          margin-right: 5px;
+          color: white;
+          text-decoration: none;
+
+          &:active {
+            background-color: rgba(160, 160, 160, 1.00);
+          }
+        }
       }
 
-      @include range-width(321px, 500px) {
-        font-size: 2rem;
-      }
+      .top_mark_boxs {
+        display: inline-block;
+        float: right;
+        background-color: white;
+        padding: 0 5px;
+        margin-top: 6px;
+        @include clearfix();
 
-      @include range-width(0, 321px) {
-        font-size: 1.5rem;
+        > a {
+          display: inline-block;
+          font-size: 1rem;
+          width: 15px;
+          padding: 4px 0;
+          text-decoration: none;
+          color: rgba(160, 160, 160, 1.00);
+
+          &:nth-child(1) {
+            float: left;
+            &:active, &.mark_hover {
+              color: red;
+            }
+          }
+
+          &:nth-child(2) {
+            margin: 0 12px;
+
+            &:active, &.mark_hover {
+              color: rgba(254, 210, 48, 1.00);
+            }
+          }
+
+          &:nth-child(3) {
+            float: right;
+            &:active, &.mark_hover {
+              color: rgba(58, 176, 110, 1.00);
+            }
+          }
+        }
       }
     }
   }
 
-  .m_cent_boxs {
-    @include range-width(500px, 769px) {
-      height: calc(100% - 65px - 75px);
-      padding: 25px;
-    }
-
-    @include range-width(321px, 500px) {
-      height: calc(100% - 55px - 61px);
-      padding: 18px; //18+18+25
-    }
-
-    @include range-width(0, 321px) {
-      height: calc(100% - 45px - 51px);
-      padding: 13px; //13+13+25
-    }
-
+  // 中間
+  .content_boxs {
     display: inline-block;
     width: 100%;
-    // 最後面75=25+25+25
-    height: calc(100% - 75px - 75px);
-    padding: 25px;
-    @include clearfix();
+    padding: 15px 15px 40px 15px;
 
-    .m_cent_box {
+    .content_box {
       display: inline-block;
       width: 100%;
       height: 100%;
-      background-color: white;
 
-      // 標題
-      .m_title_boxs {
-        display: inline-block;
-        width: 100%;
-        height: 100px;
-        background-color: $deep_blue;
-        color: white;
-        font-size: 2.5rem;
-        line-height: 100px;
-
-        + * {
-          height: calc(100% - 100px);
-        }
-
-        @include range-width(500px, 769px) {
-          height: 70px;
-          line-height: 70px;
-          font-size: 1.5rem;
-
-          + * {
-            height: calc(100% - 70px);
-          }
-        }
-
-        @include range-width(321px, 500px) {
-          height: 50px;
-          line-height: 50px;
-          font-size: 1.5rem;
-
-          + * {
-            height: calc(100% - 50px);
-          }
-        }
-
-        @include range-width(0, 321px) {
-          height: 40px;
-          line-height: 40px;
-          font-size: 1.3rem;
-
-          + * {
-            height: calc(100% - 40px);
-          }
-        }
+      &.w_box {
+        background-color: white;
       }
 
-      // 內文
-      .m_cent_content {
+      .c_top_boxs {
         display: inline-block;
         width: 100%;
-        position: relative;
+        height: 40px;
+        background-color: $deep_blue;
+        padding: 0 10px;
+        @include clearfix();
 
-        &.ac_boxs {
-          padding: 10px 12px;
+        &.boxs2 {
+          height: 65px;
         }
 
-        // 條狀式目錄：簡易
-        .ca_deta_boxs {
+        &.boxs3 {
+          height: 85px;
+        }
+
+        .title_type {
           display: inline-block;
           width: 100%;
-          padding-left: 30px;
-          @include clearfix();
+          font-size: 1.2rem;
+          color: white;
+          line-height: 35px;
 
-          @include range-width(500px, 769px) {
-            padding-left: 20px;
-          }
-
-          @include range-width(321px, 500px) {
-            padding-left: 15px;
-          }
-
-          @include range-width(0, 321px) {
-            padding-left: 10px;
-          }
-
-          &.gu_date_boxs {
-            position: relative;
-            padding-left: 55px;
-            margin-top: -6px;
-
-            @include range-width(500px, 769px) {
-              padding-left: 45px;
-            }
-
-            @include range-width(321px, 500px) {
-              padding-left: 35px;
-            }
-
-            @include range-width(0, 321px) {
-              padding-left: 30px;
-            }
-
-            .ca_list_boxs {
-              &:nth-child(2) {
-                &:before {
-                  display: inline-block;
-                  content: '';
-                  height: 19px;
-                  margin-top: 19px;
-                  border-left: 1px solid $deep_blue;
-                }
-              }
-
-              &:last-child {
-                &:before {
-                  display: inline-block;
-                  content: '';
-                  height: 16px;
-                  border-left: 1px solid $deep_blue;
-                }
-              }
-            }
-
-            .out_list_boxs {
-              position: absolute;
-              top: 6px;
-              left: 19px;
-              display: inline-block;
-              width: 25px;
-              height: 25px;
-              line-height: 25px;
-              font-size: 1rem;
-              background-color: $deep_blue;
-              color: white;
-              @include transition(all .3s);
-              
-
-              &:after {
-                position: absolute;
-                display: inline-block;
-                content: '─';
-                color:$deep_blue;
-                top: 0;
-                right: -12px;
-              }
-            }
-          }
-
-          .ca_list_span {
-            display: inline-block;
-            width: 100%;
-            height: 15px;
-            float: left;
-            border-left: 1px solid $deep_blue;
-
-            &.gu_height {
-              height: 30px;
-            }
-          }
-
-          .ca_list_boxs {
-            display: inline-block;
-            width: 100%;
-            float: left;
+          &.book_type {
             text-align: left;
-            @include clearfix();
+            float: left;
+
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+
+          i {
+            display: inline-block;
+            font-size: .9rem;
+            padding: 10px 3px;
+
+            &.r {color: red;}
+            &.y {color: rgba(254, 211, 49, 1.00);}
+            &.g {color:rgba(51, 167, 99, 1.00);}
+            
+          }
+        }
+
+        .type_size {
+          display: inline-block;
+          width: 100%;
+          height: 25px;
+          @include clearfix();
+          
+          > div {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(160, 160, 160, 1.00);
+            color: white;
+            font-size: .9rem;
+            float: right;
+            margin-left: 5px;
+
+            &:active, &.size_hover {
+              border: 1px solid white;
+              background-color: $deep_blue;
+            }
+          }
+        } 
+
+        .time_boxs {
+          display: inline-block;
+          width: 100%;
+          height: 25px;
+          @include clearfix();
+          padding-top: 8px;
+
+          .time_title, .time_mark {
+            display: inline-block;
+            font-size: .6rem;
+            color: white;
+          }
+
+          .time_title {
+            float: left;
 
             &:before {
               display: inline-block;
-              content: '';
-              height: 67px;
-              border-left: 1px solid $deep_blue;
-
-              @include range-width(500px, 769px) {
-                height: 57px;
-              }
-
-              @include range-width(321px, 500px) {
-                height: 37px;
-              }
-
-              @include range-width(0, 321px) {
-                height: 27px;
-              }
+              content: '\e907';
+              font-family: 'icomoon';
+              padding-top: 3px;
+              padding-right: 3px;
             }
+          }
 
-            &:last-child {
-              &:before {
-                display: inline-block;
-                content: '';
-                height: 19px;
-                border-left: 1px solid $deep_blue;
-              }
-            }
+          .time_mark {
+            float: right;
 
-            a {
+            &:before {
               display: inline-block;
-              cursor: pointer;
-              padding: 5px 0;
-              text-overflow: ellipsis;
-              
-              white-space : nowrap;
-              width: 90%;
-              overflow : hidden;
+              content: '\f0c8';
+              font-family: 'icomoon';
+              padding-top: 3px;
+              padding-right: 3px;
+              color: rgba(160, 160, 160, 1.00);
+            }
+          }
 
-              font-size: 2.5rem;
-              color: black;
-              text-decoration: none;
-              @include transition(color .3s);
+          .time_star {
+            display: inline-block;
+            float: right;
+            @include clearfix();
+            
+            > div {
+              display: inline-block;
+              float: left;
+              font-size: .6rem;
+              padding: 3px;
+              color: rgba(160, 160, 160, 1.00);
 
-              @include range-width(500px, 769px) {
-                font-size: 2rem;
-              }
-
-              @include range-width(321px, 500px) {
-                font-size: 1.5rem;
+              &:active, &.star_hover {
+                color: rgba(254, 211, 49, 1.00);
               }
 
               @include range-width(0, 321px) {
-                font-size: 1.2rem;
-              }
-
-              &:hover, &:active {
-                color: $deep_blue;
-              } 
-
-              &:before {
-                display: inline-block;
-                content: '─';
-                color: $deep_blue;
-                margin-right: 5px;
-              }
-
-              &.ca_ac {
-                color: $deep_blue;
-              }
-
-              &.gu_ac {
-                font-weight: 600;
-                color: $deep_blue;
-
-                &:before {
-                  font-weight: 200;
-                }
-              }
-
-              &.gu_d {
-                font-size: 1rem;
-                color: rgba(13, 92, 164, 1.00);
-
-                 &:before {
-                  margin-right: 8px;
-                }
+                padding: 3px 1px;
               }
             }
           }
         }
       }
+
+
     }
   }
+
+  // 最下面
+  .down_boxs {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    @include clearfix();
+
+    background-color: rgba(255, 0, 0, 0.2);
+
+    .down_L, .down_R {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      background-color: $deep_gray;
+      color: white;
+
+      &:active {
+        background-color: $deep_blue;
+      }
+    }
+
+    .down_L {
+      float: left;
+    }
+
+    .down_R {
+      float: right;
+    }
+
+    .down_mil {
+      display: inline-block;
+      width: calc(100% - 60px);
+      height: 30px;
+      background-color: white;
+      padding: 5px 10px;
+      font-size: .9rem;
+      text-align: left;
+      color: $deep_gray;
+    }
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
