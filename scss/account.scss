@@ -8,23 +8,94 @@
 $light_blue: rgba(13, 92, 163, 1.00);
 $deep_blue: rgba(30, 49, 80, 1.00);
 $light_gray: rgba(232, 232, 232, 1.00);
+$deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
 
-// 內容左邊css
 
+.ac_content {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-align: left;
+  padding-bottom: 40px;
 
-//內容右邊css 
-.top_box {
-
-  @include range-width(769px, 1240px) {
-    font-size: 1.5rem;
+  &.ac_content_all {
+    width: 100%
   }
 
+  .ac_name, .ac_detail {
+    display: inline-block;
+    width: 100%;
+    color: black;
+  }
+
+  .ac_name {
+    font-size: 1.2rem;
+
+    &:before {
+      display: inline-block;
+      content: '*';
+      color: red;
+      font-size: .9rem;
+      padding: 6px 5px 0 0;
+    }
+  }
+
+  .ac_detail {
+    font-size: 1.3rem;
+  }
+}
+
+
+.ac_change {
   display: inline-block;
   width: 100%;
-  height: 65px;
-  background-color: $deep_blue;
-  font-size: 2rem;
-  line-height: 65px;
-  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 12px;
+
+  span {
+    display: inline-block;
+    width: 100%;
+    color: $light_blue;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  button {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    background-color: $deep_blue;
+
+    &:active {
+      background-color: $light_blue;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

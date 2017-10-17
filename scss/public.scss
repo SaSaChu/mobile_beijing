@@ -29,11 +29,41 @@
 }
 
 
+.icon-ban:before {
+  content: "\e90f";
+}
+.icon-pqu:before {
+  content: "\e910";
+}
+.icon-fa:before {
+  content: "\e90c";
+}
+.icon-ok:before {
+  content: "\e90d";
+}
+.icon-sa:before {
+  content: "\e90e";
+}
+.icon-big:before {
+  content: "\e90b";
+}
+.icon-an:before {
+  content: "\e908";
+}
+.icon-qu:before {
+  content: "\e909";
+}
+.icon-time:before {
+  content: "\e907";
+}
 .icon-reload:before {
   content: "\e906";
 }
 .icon-hand:before {
   content: "\e905";
+}
+.icon-circle:before {
+  content: "\e90a";
 }
 .icon-chevron-down:before {
   content: "\e900";
@@ -47,17 +77,32 @@
 .icon-chevron-up:before {
   content: "\e903";
 }
+.icon-add:before {
+  content: "\e145";
+}
 .icon-close:before {
   content: "\e5cd";
 }
 .icon-dehaze:before {
   content: "\e3c7";
 }
-.icon-dash:before {
-  content: "\f0ca";
+.icon-drag_handle:before {
+  content: "\e25d";
 }
-.icon-plus:before {
-  content: "\f05d";
+.icon-remove:before {
+  content: "\e15b";
+}
+.icon-asterisk:before {
+  content: "\f069";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-square-o:before {
+  content: "\f096";
+}
+.icon-square:before {
+  content: "\f0c8";
 }
 .icon-search:before {
   content: "\e904";
@@ -88,6 +133,7 @@ $light_blue: rgba(13, 92, 163, 1.00);
 $deep_blue: rgba(30, 49, 80, 1.00);
 $light_gray: rgba(232, 232, 232, 1.00);
 $deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
 
 
 #m_out_boxs {
@@ -99,13 +145,18 @@ $deep_gray: rgba(73, 73, 73, 1.00);
     display: inline-block;
     width: 100%;
     height: 75px;
+    @include clearfix();
 
-    @include range-width(421px, 641px) {
-      height: 60px;
+    @include range-width(500px, 769px) {
+      height: 65px;
     }
 
-    @include range-width(0, 421px) {
-      height: 40px;
+    @include range-width(321px, 500px) {
+      height: 55px;
+    }
+
+    @include range-width(0, 321px) {
+      height: 45px;
     }
 
     .m_btn_close, .m_btn_hand, .m_btn_back {
@@ -114,8 +165,8 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       background-color: $deep_gray;
       cursor: pointer;
 
-      &:hover, &:active {
-        background-color: $deep_blue;
+      &:active {
+        background-color: rgba(160, 160, 160, 1.00);
       }
     }
 
@@ -124,15 +175,21 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       height: 75px;
       line-height: 70px;
 
-      @include range-width(421px, 641px) {
-        width: 60px;
-        height: 60px;
+      @include range-width(500px, 769px) {
+        width: 65px;
+        height: 65px;
         line-height: 60px;
       }
 
-      @include range-width(0, 421px) {
-        width: 40px;
-        height: 40px;
+      @include range-width(321px, 500px) {
+        width: 55px;
+        height: 55px;
+        line-height: 50px;
+      }
+
+      @include range-width(0, 321px) {
+        width: 45px;
+        height: 45px;
         line-height: 40px;
       }
     }
@@ -141,12 +198,16 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       float: left;
       font-size: 4.4rem;
 
-      @include range-width(421px, 641px) {
-        font-size: 3.5rem;
+      @include range-width(500px, 769px) {
+        font-size: 3.4rem;
       }
 
-      @include range-width(0, 421px) {
-        font-size: 2rem;
+      @include range-width(321px, 500px) {
+        font-size: 3.0rem;
+      }
+
+      @include range-width(0, 321px) {
+        font-size: 2.2rem;
       }
     }
 
@@ -154,24 +215,33 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       width: 65px;
       height: 65px;
       float: left;
-      margin: 10px 0 0 60px; 
+      margin: 10px 0 0 30px; 
       @include border-radius(40px);
       font-size: 2.5rem;
       line-height: 60px;
 
-      @include range-width(421px, 641px) {
+      @include range-width(500px, 769px) {
         width: 55px;
         height: 55px;
-        line-height: 55px;
-        font-size: 2rem;
+        font-size: 2.0rem;
+        line-height: 50px;
+        margin: 10px 0 0 20px; 
       }
 
-      @include range-width(0, 421px) {
+      @include range-width(321px, 500px) {
+        width: 45px;
+        height: 45px;
+        font-size: 2rem;
+        line-height: 40px;
+        margin: 10px 0 0 15px; 
+      }
+
+      @include range-width(0, 321px) {
         width: 35px;
         height: 35px;
-        line-height: 35px;
-        font-size: 1rem;
-        margin: 5px 0 0 30px; 
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin: 10px 0 0 10px; 
       }
     }
 
@@ -179,25 +249,34 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       float: right;
       font-size: 3rem;
 
-      @include range-width(421px, 641px) {
-        font-size: 2.2rem;
+      @include range-width(500px, 769px) {
+        font-size: 2.5rem;
       }
 
-      @include range-width(0, 421px) {
+      @include range-width(321px, 500px) {
+        font-size: 2rem;
+      }
+
+      @include range-width(0, 321px) {
         font-size: 1.5rem;
       }
     }
   }
 
   .m_cent_boxs {
-    @include range-width(421px, 641px) {
-      height: calc(100% - 60px - 60px);
-      padding: 20px;
+    @include range-width(500px, 769px) {
+      height: calc(100% - 65px - 75px);
+      padding: 25px;
     }
 
-    @include range-width(0, 421px) {
-      height: calc(100% - 40px - 45px);
-      padding: 15px;
+    @include range-width(321px, 500px) {
+      height: calc(100% - 55px - 61px);
+      padding: 18px; //18+18+25
+    }
+
+    @include range-width(0, 321px) {
+      height: calc(100% - 45px - 51px);
+      padding: 13px; //13+13+25
     }
 
     display: inline-block;
@@ -205,6 +284,7 @@ $deep_gray: rgba(73, 73, 73, 1.00);
     // 最後面75=25+25+25
     height: calc(100% - 75px - 75px);
     padding: 25px;
+    @include clearfix();
 
     .m_cent_box {
       display: inline-block;
@@ -212,6 +292,7 @@ $deep_gray: rgba(73, 73, 73, 1.00);
       height: 100%;
       background-color: white;
 
+      // 標題
       .m_title_boxs {
         display: inline-block;
         width: 100%;
@@ -221,16 +302,241 @@ $deep_gray: rgba(73, 73, 73, 1.00);
         font-size: 2.5rem;
         line-height: 100px;
 
-        @include range-width(421px, 641px) {
-          height: 80px;
-          line-height: 80px;
-          font-size: 1.5rem;
+        + * {
+          height: calc(100% - 100px);
         }
 
-        @include range-width(0, 421px) {
+        @include range-width(500px, 769px) {
+          height: 70px;
+          line-height: 70px;
+          font-size: 1.5rem;
+
+          + * {
+            height: calc(100% - 70px);
+          }
+        }
+
+        @include range-width(321px, 500px) {
+          height: 50px;
+          line-height: 50px;
+          font-size: 1.5rem;
+
+          + * {
+            height: calc(100% - 50px);
+          }
+        }
+
+        @include range-width(0, 321px) {
           height: 40px;
           line-height: 40px;
-          font-size: 1.2rem;
+          font-size: 1.3rem;
+
+          + * {
+            height: calc(100% - 40px);
+          }
+        }
+      }
+
+      // 內文
+      .m_cent_content {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+
+        &.ac_boxs {
+          padding: 10px 12px;
+        }
+
+        // 條狀式目錄：簡易
+        .ca_deta_boxs {
+          display: inline-block;
+          width: 100%;
+          padding-left: 30px;
+          @include clearfix();
+
+          @include range-width(500px, 769px) {
+            padding-left: 20px;
+          }
+
+          @include range-width(321px, 500px) {
+            padding-left: 15px;
+          }
+
+          @include range-width(0, 321px) {
+            padding-left: 10px;
+          }
+
+          &.gu_date_boxs {
+            position: relative;
+            padding-left: 55px;
+            margin-top: -6px;
+
+            @include range-width(500px, 769px) {
+              padding-left: 45px;
+            }
+
+            @include range-width(321px, 500px) {
+              padding-left: 35px;
+            }
+
+            @include range-width(0, 321px) {
+              padding-left: 30px;
+            }
+
+            .ca_list_boxs {
+              &:nth-child(2) {
+                &:before {
+                  display: inline-block;
+                  content: '';
+                  height: 19px;
+                  margin-top: 19px;
+                  border-left: 1px solid $deep_blue;
+                }
+              }
+
+              &:last-child {
+                &:before {
+                  display: inline-block;
+                  content: '';
+                  height: 16px;
+                  border-left: 1px solid $deep_blue;
+                }
+              }
+            }
+
+            .out_list_boxs {
+              position: absolute;
+              top: 6px;
+              left: 19px;
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              line-height: 25px;
+              font-size: 1rem;
+              background-color: $deep_blue;
+              color: white;
+              @include transition(all .3s);
+              
+
+              &:after {
+                position: absolute;
+                display: inline-block;
+                content: '─';
+                color:$deep_blue;
+                top: 0;
+                right: -12px;
+              }
+            }
+          }
+
+          .ca_list_span {
+            display: inline-block;
+            width: 100%;
+            height: 15px;
+            float: left;
+            border-left: 1px solid $deep_blue;
+
+            &.gu_height {
+              height: 30px;
+            }
+          }
+
+          .ca_list_boxs {
+            display: inline-block;
+            width: 100%;
+            float: left;
+            text-align: left;
+            @include clearfix();
+
+            &:before {
+              display: inline-block;
+              content: '';
+              height: 67px;
+              border-left: 1px solid $deep_blue;
+
+              @include range-width(500px, 769px) {
+                height: 57px;
+              }
+
+              @include range-width(321px, 500px) {
+                height: 37px;
+              }
+
+              @include range-width(0, 321px) {
+                height: 27px;
+              }
+            }
+
+            &:last-child {
+              &:before {
+                display: inline-block;
+                content: '';
+                height: 19px;
+                border-left: 1px solid $deep_blue;
+              }
+            }
+
+            a {
+              display: inline-block;
+              cursor: pointer;
+              padding: 5px 0;
+              text-overflow: ellipsis;
+              
+              white-space : nowrap;
+              width: 90%;
+              overflow : hidden;
+
+              font-size: 2.5rem;
+              color: black;
+              text-decoration: none;
+              @include transition(color .3s);
+
+              @include range-width(500px, 769px) {
+                font-size: 2rem;
+              }
+
+              @include range-width(321px, 500px) {
+                font-size: 1.5rem;
+              }
+
+              @include range-width(0, 321px) {
+                font-size: 1.2rem;
+              }
+
+              &:hover, &:active {
+                color: $deep_blue;
+              } 
+
+              &:before {
+                display: inline-block;
+                content: '─';
+                color: $deep_blue;
+                margin-right: 5px;
+              }
+
+              &.ca_ac {
+                color: $deep_blue;
+              }
+
+              &.gu_ac {
+                font-weight: 600;
+                color: $deep_blue;
+
+                &:before {
+                  font-weight: 200;
+                }
+              }
+
+              &.gu_d {
+                font-size: 1rem;
+                color: rgba(13, 92, 164, 1.00);
+
+                 &:before {
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
         }
       }
     }
