@@ -374,11 +374,20 @@ html body {
   line-height: 0;
   clear: both;
 }
+#out_boxs .content_boxs .content_box .c_top_boxs + * {
+  height: calc(100% - 40px);
+}
 #out_boxs .content_boxs .content_box .c_top_boxs.boxs2 {
   height: 65px;
 }
+#out_boxs .content_boxs .content_box .c_top_boxs.boxs2 + * {
+  height: calc(100% - 65px);
+}
 #out_boxs .content_boxs .content_box .c_top_boxs.boxs3 {
   height: 85px;
+}
+#out_boxs .content_boxs .content_box .c_top_boxs.boxs3 + * {
+  height: calc(100% - 85px);
 }
 #out_boxs .content_boxs .content_box .c_top_boxs .title_type {
   display: inline-block;
@@ -386,6 +395,9 @@ html body {
   font-size: 1.2rem;
   color: white;
   line-height: 35px;
+}
+#out_boxs .content_boxs .content_box .c_top_boxs .title_type.alone {
+  line-height: 40px;
 }
 #out_boxs .content_boxs .content_box .c_top_boxs .title_type.book_type {
   text-align: left;
@@ -500,6 +512,24 @@ html body {
     padding: 3px 1px;
   }
 }
+#out_boxs .content_boxs .content_box .general_boxs {
+  display: inline-block;
+  width: 100%;
+  *zoom: 1;
+  padding: 15px 10px;
+  position: relative;
+}
+#out_boxs .content_boxs .content_box .general_boxs:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+#out_boxs .content_boxs .content_box .nospace_scroll {
+  display: inline-block;
+  width: 100%;
+  overflow-y: scroll;
+}
 #out_boxs .down_boxs {
   display: inline-block;
   width: 100%;
@@ -508,7 +538,6 @@ html body {
   left: 0;
   bottom: 0;
   *zoom: 1;
-  background-color: rgba(255, 0, 0, 0.2);
 }
 #out_boxs .down_boxs:after {
   display: table;

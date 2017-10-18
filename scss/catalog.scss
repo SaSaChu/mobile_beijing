@@ -1,0 +1,157 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+$light_blue: rgba(13, 92, 163, 1.00);
+$deep_blue: rgba(30, 49, 80, 1.00);
+$light_gray: rgba(232, 232, 232, 1.00);
+$deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
+
+
+// 我的帳戶：條狀式目錄
+.ca_deta_boxs {
+  display: inline-block;
+  width: 100%;
+  padding-left: 20px;
+  @include clearfix();
+
+  &.gu_date_boxs {
+    position: relative;
+    padding-left: 55px;
+    margin-top: -6px;
+
+    .ca_list_boxs {
+      &:nth-child(2) {
+        &:before {
+          display: inline-block;
+          content: '';
+          height: 19px;
+          margin-top: 19px;
+          border-left: 1px solid $deep_blue;
+        }
+      }
+
+      &:last-child {
+        &:before {
+          display: inline-block;
+          content: '';
+          height: 16px;
+          border-left: 1px solid $deep_blue;
+        }
+      }
+    }
+
+    .out_list_boxs {
+      position: absolute;
+      top: 6px;
+      left: 19px;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 1.1rem;
+      background-color: $deep_blue;
+      color: white;
+      @include transition(all .3s);
+      
+
+      &:after {
+        position: absolute;
+        display: inline-block;
+        content: '─';
+        color:$deep_blue;
+        top: 0;
+        right: -12px;
+      }
+    }
+  }
+
+  .ca_list_span {
+    display: inline-block;
+    width: 100%;
+    height: 15px;
+    float: left;
+    border-left: 1px solid $deep_blue;
+
+    &.gu_height {
+      height: 30px;
+    }
+  }
+
+  .ca_list_boxs {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    text-align: left;
+    @include clearfix();
+
+    &:before {
+      display: inline-block;
+      content: '';
+      height: 37px;
+      border-left: 1px solid $deep_blue;
+    }
+
+    &:last-child {
+      &:before {
+        display: inline-block;
+        content: '';
+        height: 19px;
+        border-left: 1px solid $deep_blue;
+      }
+    }
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+      padding: 5px 0;
+      text-overflow: ellipsis;
+      
+      white-space : nowrap;
+      width: 90%;
+      overflow : hidden;
+
+      font-size: 1.1rem;
+      color: black;
+      text-decoration: none;
+      @include transition(color .3s);
+
+      &:hover, &:active {
+        color: $deep_blue;
+      } 
+
+      &:before {
+        display: inline-block;
+        content: '─';
+        color: $deep_blue;
+        margin-right: 5px;
+      }
+
+      &.ca_ac {
+        color: $deep_blue;
+      }
+
+      &.gu_ac {
+        font-weight: 600;
+        color: $deep_blue;
+
+        &:before {
+          font-weight: 200;
+        }
+      }
+
+      &.gu_d {
+        font-size: 1.1rem;
+        color: rgba(13, 92, 164, 1.00);
+
+         &:before {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

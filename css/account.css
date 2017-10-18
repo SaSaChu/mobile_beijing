@@ -46,3 +46,139 @@
  * @author      ZEUS Design - http://www.zeusdesign.com.tw
  * @copyright   Copyright (c) 2016 ZEUS Design
  */
+.general_boxs .ac_content {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 30px;
+  text-align: left;
+}
+.general_boxs .ac_content.ac100:nth-child(1), .general_boxs .ac_content.ac100:nth-child(2) {
+  display: inline-block;
+  width: 100%;
+  float: left;
+}
+.general_boxs .ac_content:nth-child(1), .general_boxs .ac_content:nth-child(2) {
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+.general_boxs .ac_content .ac_name, .general_boxs .ac_content .ac_detail {
+  color: black;
+}
+.general_boxs .ac_content .ac_name {
+  font-size: .9rem;
+}
+.general_boxs .ac_content .ac_name:before {
+  display: inline-block;
+  content: '*';
+  color: red;
+  font-size: .9rem;
+  padding: 2px 5px 0 0;
+}
+.general_boxs .ac_content .ac_detail {
+  font-size: 1rem;
+  padding-left: 12px;
+}
+.general_boxs .ac_content .ac_detail.pw_detail {
+  padding-left: 0;
+}
+.general_boxs .ac_content input {
+  display: inline-block;
+  width: 100%;
+  color: black;
+  font-size: 1rem;
+  padding: 8px 5px;
+  background-color: transparent;
+  border: 1px solid #a2a3a3;
+}
+.general_boxs .ac_btn_boxs {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  *zoom: 1;
+}
+.general_boxs .ac_btn_boxs:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+.general_boxs .ac_btn_boxs span {
+  display: inline-block;
+  width: 100%;
+  color: #0d5ca3;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  text-decoration: underline;
+}
+.general_boxs .ac_btn_boxs button, .general_boxs .ac_btn_boxs .ac_btn {
+  display: inline-block;
+  background-color: #1e3150;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 1rem;
+  height: 30px;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.general_boxs .ac_btn_boxs button:hover, .general_boxs .ac_btn_boxs button:active, .general_boxs .ac_btn_boxs .ac_btn:hover, .general_boxs .ac_btn_boxs .ac_btn:active {
+  background-color: #0d5ca3;
+}
+.general_boxs .ac_btn_boxs button {
+  width: 100%;
+}
+.general_boxs .ac_btn_boxs .ac_btn {
+  width: calc(50% - 10px / 2);
+  float: left;
+}
+.general_boxs .ac_btn_boxs .ac_btn:nth-child(1) {
+  margin-right: 5px;
+}
+.general_boxs .ac_btn_boxs .ac_btn:nth-child(2) {
+  margin-left: 5px;
+}
+
+.nospace_scroll .buy_boxs {
+  display: inline-block;
+  width: 100%;
+  *zoom: 1;
+  padding: 15px 10px;
+}
+.nospace_scroll .buy_boxs:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+.nospace_scroll .buy_boxs .buy_box {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+.nospace_scroll .buy_boxs .buy_box span {
+  display: inline-block;
+  width: 100%;
+}
+.nospace_scroll .buy_boxs .buy_box span:nth-child(1) {
+  font-size: .9rem;
+  color: #919191;
+}
+.nospace_scroll .buy_boxs .buy_box span:nth-child(2) {
+  font-size: 1rem;
+  color: #494949;
+}
+.nospace_scroll .buy_boxs .buy_box:nth-child(3) {
+  width: 100%;
+  padding-top: 20px;
+}
+.nospace_scroll .buy_boxs:nth-child(2n+2) {
+  background-color: #eeeeee;
+}

@@ -274,12 +274,24 @@ $cent_gray: rgba(150, 150, 150, 1.00);
         padding: 0 10px;
         @include clearfix();
 
+        + * {
+          height: calc(100% - 40px);
+        }
+
         &.boxs2 {
           height: 65px;
+
+          + * {
+            height: calc(100% - 65px);
+          }
         }
 
         &.boxs3 {
           height: 85px;
+
+          + * {
+            height: calc(100% - 85px);
+          }
         }
 
         .title_type {
@@ -288,6 +300,10 @@ $cent_gray: rgba(150, 150, 150, 1.00);
           font-size: 1.2rem;
           color: white;
           line-height: 35px;
+
+          &.alone {
+            line-height: 40px;
+          }
 
           &.book_type {
             text-align: left;
@@ -396,7 +412,19 @@ $cent_gray: rgba(150, 150, 150, 1.00);
         }
       }
 
+      .general_boxs {
+        display: inline-block;
+        width: 100%;
+        @include clearfix();
+        padding: 15px 10px;
+        position: relative;
+      }
 
+      .nospace_scroll {
+        display: inline-block;
+        width: 100%;
+        overflow-y: scroll; 
+      }
     }
   }
 
@@ -409,8 +437,6 @@ $cent_gray: rgba(150, 150, 150, 1.00);
     left: 0;
     bottom: 0;
     @include clearfix();
-
-    background-color: rgba(255, 0, 0, 0.2);
 
     .down_L, .down_R {
       display: inline-block;
