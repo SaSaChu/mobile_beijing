@@ -1,0 +1,32 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+$light_blue: rgba(13, 92, 163, 1.00);
+$deep_blue: rgba(30, 49, 80, 1.00);
+$light_gray: rgba(232, 232, 232, 1.00);
+$deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
+
+.space_scroll {
+  p {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%; 
+    margin-bottom: 30px;
+  }
+}

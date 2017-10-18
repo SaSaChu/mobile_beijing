@@ -530,6 +530,12 @@ html body {
   width: 100%;
   overflow-y: scroll;
 }
+#out_boxs .content_boxs .content_box .space_scroll {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 10px;
+  overflow-y: scroll;
+}
 #out_boxs .down_boxs {
   display: inline-block;
   width: 100%;
