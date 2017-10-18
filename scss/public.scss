@@ -278,6 +278,10 @@ $cent_gray: rgba(150, 150, 150, 1.00);
           height: calc(100% - 40px);
         }
 
+        &.boxs_ns {
+          padding: 0;
+        }
+
         &.boxs2 {
           height: 65px;
 
@@ -293,6 +297,42 @@ $cent_gray: rgba(150, 150, 150, 1.00);
             height: calc(100% - 85px);
           }
         }
+
+        .run_box {
+          display: inline-block;
+          width: 100%;
+          height: 25px;
+
+          .im_run {
+            display: inline-block;
+            width: calc(100% - 25px);
+            height: 25px;
+            line-height: 25px;
+            float: left;
+            background-color: $light_blue;
+            font-size: 1rem;
+            color: white;
+            font-weight: 600;
+          }
+
+          .im_run_btn{
+            display: inline-block;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            float: right;
+            color: white;
+            background-color: $deep_gray;
+            font-size: 1rem;
+            border: 0;
+            outline: 0;
+            @include transition(all .3s);
+            
+            &:hover, &:active {
+              background-color: $deep_blue;
+            }
+          }
+      }
 
         .title_type {
           display: inline-block;
@@ -332,6 +372,8 @@ $cent_gray: rgba(150, 150, 150, 1.00);
           width: 100%;
           height: 25px;
           @include clearfix();
+
+          border: 1px solid rgba(255, 0, 0, .3);
           
           > div {
             display: inline-block;

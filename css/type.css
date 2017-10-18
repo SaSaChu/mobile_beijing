@@ -62,3 +62,26 @@
   width: 100%;
   margin-bottom: 30px;
 }
+.space_scroll .im_list_boxs {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 20px;
+}
+.space_scroll .im_list_boxs .im_number, .space_scroll .im_list_boxs .im_date, .space_scroll .im_list_boxs .im_fill {
+  display: inline-block;
+  font-size: 1rem;
+  float: left;
+}
+.space_scroll .im_list_boxs .im_number {
+  color: #969696;
+}
+.space_scroll .im_list_boxs .im_date {
+  padding-left: 10px;
+  padding-right: 40px;
+  color: #969696;
+}
+.space_scroll .im_list_boxs .im_fill {
+  width: 100%;
+  color: black;
+}

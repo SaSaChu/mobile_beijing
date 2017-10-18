@@ -29,4 +29,32 @@ $cent_gray: rgba(150, 150, 150, 1.00);
     width: 100%; 
     margin-bottom: 30px;
   }
+
+  .im_list_boxs {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 20px;
+
+    .im_number, .im_date, .im_fill {
+      display: inline-block;
+      font-size: 1rem;
+      float: left;
+    }
+
+    .im_number {
+      color: $cent_gray;
+    }
+
+    .im_date {
+      padding-left: 10px;
+      padding-right: 40px;
+      color: $cent_gray;
+    }
+
+    .im_fill {
+      width: 100%;
+      color: black;
+    }
+  }
 }
