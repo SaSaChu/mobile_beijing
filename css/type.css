@@ -56,6 +56,9 @@
   text-align: left;
   padding-bottom: 30px;
 }
+.space_scroll p.pbs {
+  padding-bottom: 10px;
+}
 .space_scroll img {
   display: inline-block;
   max-width: 100%;

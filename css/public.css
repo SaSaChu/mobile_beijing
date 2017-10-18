@@ -464,7 +464,6 @@ html body {
   width: 100%;
   height: 25px;
   *zoom: 1;
-  border: 1px solid rgba(255, 0, 0, 0.3);
 }
 #out_boxs .content_boxs .content_box .c_top_boxs .type_size:after {
   display: table;

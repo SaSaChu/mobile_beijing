@@ -21,6 +21,10 @@ $cent_gray: rgba(150, 150, 150, 1.00);
     color: black;
     text-align: left;
     padding-bottom: 30px;
+
+    &.pbs {
+      padding-bottom: 10px;
+    }
   }
 
   img {
