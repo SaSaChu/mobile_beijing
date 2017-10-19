@@ -1,0 +1,406 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+$light_blue: rgba(13, 92, 163, 1.00);
+$deep_blue: rgba(30, 49, 80, 1.00);
+$light_gray: rgba(232, 232, 232, 1.00);
+$deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
+
+b {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 9px 5px;  
+
+  &.b01 {
+    color: red;
+  }
+
+  &.b02 {
+    color: rgba(255, 206, 4, 1.00);
+  }
+
+  &.b03 {
+    color: rgba(44, 168, 97, 1.00);
+  }
+}
+
+
+.book_fan_boxs {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 15px;
+
+  .book_fan_box {
+    display: inline-block;
+    width: 100%;
+    @include clearfix();
+
+    &:first-child {
+      padding-bottom: 15px;
+    }
+
+    > div {
+      display: inline-block;
+      width: calc(100% / 9);
+      height: 28px;
+      line-height: 28px;
+      float: left;
+      font-size: 1rem;
+      color: white;
+      background-color: $cent_gray;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+
+
+      &.bbb {
+        border-left:  1px solid white;
+      }
+
+      &.c00 {
+        background-color: white;
+      }
+
+      &.c01 {
+        background-color: rgba(233, 97, 29, 1.00);
+      }
+      &.c02 {
+        background-color: rgba(44, 170, 63, 1.00);
+      }
+      &.c03 {
+        background-color: rgba(233, 105, 121, 1.00);
+      }
+      &.c04 {
+        background-color: rgba(8, 73, 154, 1.00);
+      }
+      &.c05 {
+        background-color: rgba(240, 157, 160, 1.00);
+      }
+      &.c06 {
+        background-color: rgba(23, 157, 149, 1.00);
+      }
+      &.c07 {
+        background-color: rgba(26, 161, 230, 1.00);
+      }
+      &.c08 {
+        background-color: rgba(199, 171, 80, 1.00);
+      }
+
+      &.bf_ac {
+        border: 2px solid red;
+      } 
+    }
+  }
+}
+
+
+.tag_boxs {
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  @include clearfix();
+
+  .tag_box {
+    display: inline-block;
+    background-color: rgba(160, 160, 160, 1.00);
+    color: white;
+    font-size: .8rem;
+    padding: 3px;
+    margin-bottom: 5px;
+    float: left;
+
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-decoration: none;
+
+    &:active {
+      background-color: $deep_blue;
+    }
+  }
+}
+
+
+.book_other_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+  padding-bottom: 20px;
+
+  &.an_pad {
+    padding-bottom: 10px;
+  }
+
+  .other_title {
+    display: inline-block;
+    float: left;
+
+    font-size: 1.2rem;
+    color: $deep_gray;
+
+    &.other_an {
+      &:before {
+        display: inline-block;
+        content: '\e90f';
+        font-family: 'icomoon';
+        color: rgba(199, 171, 80, 1.00);
+        font-size: 1.2rem; 
+        padding: 3px 5px 0 0;
+      }
+    }
+
+    &:before {
+      display: inline-block;
+      content: '\e910';
+      font-family: 'icomoon';
+      color: rgba(199, 171, 80, 1.00);
+      font-size: 1.2rem; 
+      padding: 3px 5px 0 0;
+    }
+  }
+
+  .other_name {
+    display: inline-block;
+    float: right;
+    font-size: 1.2rem;
+    color: $deep_blue;
+
+    &:before {
+      display: inline-block;
+      content: '会员：';
+      font-size: 1.2rem;
+      color: $deep_blue;
+    }
+  }
+
+  .other_table_title {
+    display: inline-block;
+    font-size: 1rem;
+    color: $deep_gray;
+    float: left;
+    padding-bottom: 10px;
+
+    &:before {
+      display: inline-block;
+      content: '*';
+      color: red;
+      font-size: .9rem;
+      padding: 3px 5px 0 0;
+    }
+  }
+
+  textarea {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    background-color: $light_gray;
+    border: 0;
+    font-size: 1rem;
+    color: $deep_gray;
+    padding: 10px;
+  }
+
+  .code_boxs {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    @include clearfix();
+
+    .code_box {
+      display: inline-block;
+      float: left;
+      width: 100%;
+      @include clearfix();
+      padding-bottom: 10px;
+
+      p {
+        display: inline-block;
+        float: left;
+        padding: 12px 10px 12px 0;
+        margin: 0;
+        font-size: 1rem;
+        color: $deep_gray;
+      }
+
+      input {
+        display: inline-block;
+        width: calc(100% - 60px);
+        padding: 12px;
+        background-color: $light_gray;
+        font-size: 1rem;
+        color: $cent_gray;
+        border: 0;
+        outline: 0;
+        float: left;
+      }
+    }
+
+    .code_show, .code_return {
+       width: calc(50% - 10px / 2);
+    }
+
+    .code_show {
+      display: inline-block;
+      float: left;
+      background-color: rgba(229, 229, 229, 1.00);
+      font-size: 1rem;
+      color: $cent_gray;
+      padding: 10px 5px;
+      margin-right: 5px;
+    }
+
+    .code_return {
+      display: inline-block;
+      cursor: pointer;
+      float: left;   
+      margin-left: 5px;
+      background-color: rgba(199, 171, 80, 1.00);
+      padding: 10px 5px;
+      color: white;
+      font-size: 1rem;
+      @include transition(all .3s);
+      border: 0;
+      outline: 0;
+
+      &:hover, &:active {
+        background-color: rgba(199, 171, 80, .9);
+      }
+    }
+  }
+
+  .an_boxs {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+
+    .an_box, .an_cent {
+      display: inline-block;
+      width: 100%;
+      color: $deep_gray;
+    }
+
+    .an_box {
+      cursor: pointer;
+      font-size: 1rem;
+      background-color: rgba(211, 241, 254, 1.00);
+      padding: 5px 10px;
+
+      @include range-width(0, 325px) {
+        font-size: .9rem;
+      }
+
+      &:after {
+        cursor: pointer;
+        display: inline-block;
+        content: '\e15b';
+        font-family: 'icomoon';
+        color: $deep_blue;
+        font-size: 1rem;
+        float: right;
+      }
+
+      &.an_gray {
+        background-color: rgba(236, 235, 235, 1.00);
+
+        &:after {
+          cursor: pointer;
+          display: inline-block;
+          content: '\e145';
+          font-family: 'icomoon';
+          color: $deep_blue;
+          font-size: 1rem;
+          float: right;
+        }
+      }
+    }
+
+    .an_cent {
+      padding: 5px 10px;
+      font-size: 1rem;
+      padding-bottom: 20px;
+
+      &:before {
+        display: inline-block;
+        content: ' A：';
+        font-size: 1rem;
+        color: $deep_gray;
+      }
+    }
+  }
+}
+
+
+.other_btn_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+
+  button {
+    display: inline-block;
+    width: calc(50% - 10px / 2);
+    padding: 10px 5px;
+    color: white;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    float: left;
+    background-color: $deep_blue;
+    
+    &:hover, &:active {
+      background-color: $light_blue;
+    }
+
+    &:nth-child(1) {
+      margin-right: 5px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 5px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

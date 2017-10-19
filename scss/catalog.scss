@@ -386,6 +386,10 @@ $cent_gray: rgba(150, 150, 150, 1.00);
   text-align: left;
   padding: 0 15px;
 
+  &.book_tree {
+    padding: 0;
+  }
+
   +.tree {
     margin-top: 16px;
   }

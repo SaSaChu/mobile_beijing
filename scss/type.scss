@@ -12,6 +12,65 @@ $deep_gray: rgba(73, 73, 73, 1.00);
 $cent_gray: rgba(150, 150, 150, 1.00);
 
 .space_scroll {
+  span {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    padding-bottom: 30px;
+
+    .ex_boxs {
+      display: inline-block;
+      color: $light_blue;
+      text-decoration: underline;
+      position: relative;
+      z-index: 1500;
+
+      .ex_box {
+        display: inline-block;
+        width: 80px;
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        z-index: 1600;
+
+        .ex_count {
+          display: block;
+          padding: 3px 8px;
+          color: white;
+          @include border-radius(5px);
+          left: 0;
+          position: relative;
+          background: rgba(13, 92, 163, .8);
+
+          &:after, &:before {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+          }
+
+          &:after {
+            border-color: rgba(136, 183, 213, 0);
+            border-width: 10px;
+            margin-right: 0;
+          }
+
+          &:before {
+            border-bottom-color: rgba(13, 92, 163, .8);
+            border-width: 10px;
+            margin-left: -36px;
+          }
+        }
+      }
+    }
+  }
+
   p {
     display: inline-block;
     padding: 0;
@@ -21,6 +80,7 @@ $cent_gray: rgba(150, 150, 150, 1.00);
     color: black;
     text-align: left;
     padding-bottom: 30px;
+    position: relative;
 
     &.pbs {
       padding-bottom: 10px;

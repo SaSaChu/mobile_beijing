@@ -214,6 +214,9 @@
   text-align: left;
   padding: 0 15px;
 }
+.tree.book_tree {
+  padding: 0;
+}
 .tree + .tree {
   margin-top: 16px;
 }

@@ -46,6 +46,60 @@
  * @author      ZEUS Design - http://www.zeusdesign.com.tw
  * @copyright   Copyright (c) 2016 ZEUS Design
  */
+.space_scroll span {
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+  padding-bottom: 30px;
+}
+.space_scroll span .ex_boxs {
+  display: inline-block;
+  color: #0d5ca3;
+  text-decoration: underline;
+  position: relative;
+  z-index: 1500;
+}
+.space_scroll span .ex_boxs .ex_box {
+  display: inline-block;
+  width: 80px;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  z-index: 1600;
+}
+.space_scroll span .ex_boxs .ex_box .ex_count {
+  display: block;
+  padding: 3px 8px;
+  color: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  left: 0;
+  position: relative;
+  background: rgba(13, 92, 163, 0.8);
+}
+.space_scroll span .ex_boxs .ex_box .ex_count:after, .space_scroll span .ex_boxs .ex_box .ex_count:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.space_scroll span .ex_boxs .ex_box .ex_count:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 10px;
+  margin-right: 0;
+}
+.space_scroll span .ex_boxs .ex_box .ex_count:before {
+  border-bottom-color: rgba(13, 92, 163, 0.8);
+  border-width: 10px;
+  margin-left: -36px;
+}
 .space_scroll p {
   display: inline-block;
   padding: 0;
@@ -55,6 +109,7 @@
   color: black;
   text-align: left;
   padding-bottom: 30px;
+  position: relative;
 }
 .space_scroll p.pbs {
   padding-bottom: 10px;
