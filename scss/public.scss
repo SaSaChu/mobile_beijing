@@ -28,6 +28,30 @@
   }
 }
 
+.icon-icon01:before {
+  content: "\e913";
+}
+.icon-icon02:before {
+  content: "\e914";
+}
+.icon-icon03:before {
+  content: "\e915";
+}
+.icon-icon04:before {
+  content: "\e916";
+}
+.icon-icon05:before {
+  content: "\e917";
+}
+.icon-icon06:before {
+  content: "\e918";
+}
+.icon-icon07:before {
+  content: "\e919";
+}
+.icon-icon08:before {
+  content: "\e91a";
+}
 .icon-timeL:before {
   content: "\e911";
 }
@@ -116,6 +140,7 @@
 
 
 
+
 html {
   height: 100%;
 
@@ -192,6 +217,10 @@ $cent_gray: rgba(150, 150, 150, 1.00);
       width: calc(100% - 70px);
       padding: 5px 15px 0 15px;
       @include clearfix();
+
+      &.in_top {
+        width: calc(100% - 35px);
+      }
 
       .top_btn_boxs {
         display: inline-block;
