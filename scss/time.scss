@@ -1,0 +1,172 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+$light_blue: rgba(13, 92, 163, 1.00);
+$deep_blue: rgba(30, 49, 80, 1.00);
+$light_gray: rgba(232, 232, 232, 1.00);
+$deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
+
+.time_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+
+  .time_box {
+    display: inline-block;
+    width: calc(100% / 2);
+    float: left;
+    padding-bottom: 20px;
+
+    .time_d {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 5px solid rgba(13, 91, 163, 1.00);
+      margin-bottom: 10px;
+      @include border-radius(100px);
+
+
+      + * {
+        height: calc(100% - 150px - 10px);
+      }
+
+      .time {
+        display: inline-block;
+        width: 100%;
+        color: rgba(199, 171, 80, 1.00);
+        font-size: 2.3rem;
+        padding-top: 5px;
+
+       &:after {
+        display: inline-block;
+        width: 100%;
+        content: '小時';
+        color: $deep_gray;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1reml
+       }
+      }
+    }
+
+    .time_type {
+      display: inline-block;
+      width: 100%;
+      font-size: .9rem;
+      color: $deep_gray;
+      padding: 0 5px;
+    }
+
+  }
+}
+
+.time_days {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(238, 238, 238, 1.00);  
+  margin-bottom: 30px;
+
+  .td_type {
+    display: inline-block;
+    color: black;
+    font-size: 1rem;
+    padding-right: 10px;
+    line-height: 50px;
+
+  }
+
+  .td_days {
+    display: inline-block;
+    color: rgba(14, 92, 164, 1.00);
+    font-size: 2rem;
+    line-height: 50px;
+
+    &:after {
+      display: inline-block;
+      content: '天';
+      color: black;
+      font-size: 1rem;
+      padding-left: 10px;
+    }
+  }
+}
+
+.time_ot_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+  
+  // d
+  border: 1px solid rgba(255, 0, 0, .3);
+
+  .ticon_boxs {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    // d
+    height: 70px;
+    background-color: rgba(255, 0, 0, 0.2);
+
+    .ticon_box {
+      display: inline-block;
+      width: 40px;
+      height: 70px;
+      font-size: 3rem;
+      color: rgba(14, 92, 164, 1.00);
+
+      &:after {
+        display: inline-block;
+        content: '\e911';
+        font-family: 'icomoon';
+      font-size: 3rem;
+      color: rgba(14, 92, 164, 1.00);
+        
+      }
+    }
+  }
+
+  .time_ot_d {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgba(13, 91, 163, 1.00);
+    margin-bottom: 10px;
+    @include border-radius(100px);
+
+
+    + * {
+      height: calc(100% - 150px - 10px);
+    }
+
+    .time_ot {
+      display: inline-block;
+      width: 100%;
+      color: rgba(199, 171, 80, 1.00);
+      font-size: 2.3rem;
+      padding-top: 5px;
+
+     &:after {
+      display: inline-block;
+      width: 100%;
+      content: '小時';
+      color: $deep_gray;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1reml
+     }
+    }
+  }
+
+  .time_ot_type {
+    display: inline-block;
+    width: 100%;
+    font-size: .9rem;
+    color: $deep_gray;
+    padding: 0 5px;
+  }
+}

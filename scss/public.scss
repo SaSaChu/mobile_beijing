@@ -28,7 +28,12 @@
   }
 }
 
-
+.icon-timeL:before {
+  content: "\e911";
+}
+.icon-timeR:before {
+  content: "\e912";
+}
 .icon-ban:before {
   content: "\e90f";
 }
@@ -107,6 +112,8 @@
 .icon-search:before {
   content: "\e904";
 }
+
+
 
 
 html {
