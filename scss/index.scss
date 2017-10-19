@@ -1,0 +1,48 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+.content_box {
+  min-height: 100% !important;
+  height: auto !important;
+  @include clearfix();
+  > * {
+    float: left;
+    display: inline-block;
+    display: inline-block;
+  }
+  > h1 {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 23px;
+    color: white;
+  }
+  > a {
+    width: calc(50% - 12px / 2);
+    height: 100px;
+    background-color: white;
+    color: #073e6d;
+    &:active, &.a  {
+      background-color: #073e6d;
+      color: white;
+    }
+    &:nth-child(2n + 3) {
+      margin-left: 12px;
+    }
+    &:nth-child(n + 4) {
+      margin-top: 12px;
+    }
+    &:before {
+      display: block;
+      font-size: 60px;
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+  }
+}
