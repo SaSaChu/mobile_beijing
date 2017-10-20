@@ -573,3 +573,7 @@
   top: 5px;
   height: calc(100% - 5px);
 }
+.tree h3 + .main.bookmani:before {
+  top: 16px;
+  height: calc(100% - 5px);
+}

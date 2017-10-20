@@ -4,6 +4,13 @@
  */
 
 @import "_oa";
+
+$light_blue: rgba(13, 92, 163, 1.00);
+$deep_blue: rgba(30, 49, 80, 1.00);
+$light_gray: rgba(232, 232, 232, 1.00);
+$deep_gray: rgba(73, 73, 73, 1.00);
+$cent_gray: rgba(150, 150, 150, 1.00);
+
 .content_box {
   min-height: 100% !important;
   height: auto !important;
@@ -15,19 +22,26 @@
   }
   > h1 {
     width: 100%;
-    height: 45px;
-    line-height: 45px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    font-size: 23px;
+    font-size: 1.2rem;
     color: white;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
+
   > a {
     width: calc(50% - 12px / 2);
     height: 100px;
     background-color: white;
-    color: #073e6d;
+    color: $deep_blue;
+    font-size: .9rem;
+    padding-top: 5px;
+    text-decoration: none;
+
     &:active, &.a  {
-      background-color: #073e6d;
+      background-color: $deep_blue;
       color: white;
     }
     &:nth-child(2n + 3) {

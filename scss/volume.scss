@@ -55,7 +55,7 @@ $cent_gray: rgba(150, 150, 150, 1.00);
       text-align: left; 
       @include clearfix();     
 
-      span {
+      .vo_year {
         display: inline-block;
         font-size: 1rem;
         color: black;
@@ -242,7 +242,7 @@ $cent_gray: rgba(150, 150, 150, 1.00);
               font-size: .8rem;
               text-align: center;
               color: rgba(224, 0, 12, 1.00);
-              padding-top: 4px;
+              padding-top: 8px;
               font-weight: normal;
               &:after {
                 content: '';
@@ -311,8 +311,8 @@ $cent_gray: rgba(150, 150, 150, 1.00);
                 font-size: 1rem;
                 color: rgba(226, 0, 14, 1.00);
                 position: absolute;
-                left: -5px;
-                top: 3px;
+                left: 2px;
+                top: 0;
                 display: inline-block;
                 width: 25px;
                 height: 25px;
@@ -320,16 +320,41 @@ $cent_gray: rgba(150, 150, 150, 1.00);
                 text-align: center;
                 border: 2px solid rgba(226, 0, 14, 1.00);
                 @include border-radius(50%);
+
+                @include range-width(450px, 769px) {
+                  left: 20px;
+                }
+                @include range-width(376px, 415px) {
+                  left: 4px;
+                  width: 25px;
+                }
+                @include range-width(0, 325px) {
+                  left: -5px;
+                }
               }
+
               &:before {
                 content: '';
                 position: absolute;
                 right: -5px;
-                top: calc(50% - 3px / 2);
+                top: calc(50% - 2px / 2);
                 display: inline-block;
                 width: 10px;
                 height: 3px;
                 background-color: rgba(226, 0, 14, 1.00);
+
+                @include range-width(450px, 769px) {
+                  left: 46px;
+                  width: 25px;
+                }
+                @include range-width(376px, 415px) {
+                  left: 27px;
+                  width: 13px;
+                }
+                @include range-width(0, 325px) {
+                  left: 20px;
+                  width: 10px;
+                }
               }
             }
           }

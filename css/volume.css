@@ -92,7 +92,7 @@
   line-height: 0;
   clear: both;
 }
-.space_scroll .vo_menu_link .vo_link_boxs span {
+.space_scroll .vo_menu_link .vo_link_boxs .vo_year {
   display: inline-block;
   font-size: 1rem;
   color: black;
@@ -267,7 +267,7 @@
   font-size: .8rem;
   text-align: center;
   color: #e0000c;
-  padding-top: 4px;
+  padding-top: 8px;
   font-weight: normal;
 }
 .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box.last > div.oa1:after {
@@ -354,8 +354,8 @@
   font-size: 1rem;
   color: #e2000e;
   position: absolute;
-  left: -5px;
-  top: 3px;
+  left: 2px;
+  top: 0;
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -366,15 +366,49 @@
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+@media screen and (max-width: 768px) and (min-width: 450px) {
+  .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:after {
+    left: 20px;
+  }
+}
+@media screen and (max-width: 414px) and (min-width: 376px) {
+  .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:after {
+    left: 4px;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 324px) and (min-width: 0) {
+  .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:after {
+    left: -5px;
+  }
+}
 .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:before {
   content: '';
   position: absolute;
   right: -5px;
-  top: calc(50% - 3px / 2);
+  top: calc(50% - 2px / 2);
   display: inline-block;
   width: 10px;
   height: 3px;
   background-color: #e2000e;
+}
+@media screen and (max-width: 768px) and (min-width: 450px) {
+  .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:before {
+    left: 46px;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 414px) and (min-width: 376px) {
+  .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:before {
+    left: 27px;
+    width: 13px;
+  }
+}
+@media screen and (max-width: 324px) and (min-width: 0) {
+  .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div:nth-child(1).oa1:before {
+    left: 20px;
+    width: 10px;
+  }
 }
 .space_scroll .vo_nine_boxs .nine_table_boxs .nine_table_box > div.mi_icon:before {
   display: inline-block;

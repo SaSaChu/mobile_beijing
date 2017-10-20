@@ -428,6 +428,13 @@ $cent_gray: rgba(150, 150, 150, 1.00);
         top: 5px;
         height: calc(100% - 5px);
       }
+
+      &.bookmani {
+        &:before {
+          top: 16px;
+          height: calc(100% - 5px);
+        }
+      }
     }
   }
 }

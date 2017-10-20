@@ -105,10 +105,14 @@ b {
   @include clearfix();
 
   .tag_box {
+    @include range-width(0, 325px) {
+      font-size: .6rem;
+    }
+
     display: inline-block;
     background-color: rgba(160, 160, 160, 1.00);
     color: white;
-    font-size: .8rem;
+    font-size: .9rem;
     padding: 3px;
     margin-bottom: 5px;
     float: left;
