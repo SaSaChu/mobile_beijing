@@ -28,6 +28,42 @@
   }
 }
 
+.icon-add:before {
+  content: "\e145";
+}
+.icon-close:before {
+  content: "\e5cd";
+}
+.icon-dehaze:before {
+  content: "\e3c7";
+}
+.icon-drag_handle:before {
+  content: "\e25d";
+}
+.icon-remove:before {
+  content: "\e15b";
+}
+.icon-circle:before {
+  content: "\e90a";
+}
+.icon-chevron-down:before {
+  content: "\e900";
+}
+.icon-chevron-left:before {
+  content: "\e901";
+}
+.icon-chevron-right:before {
+  content: "\e902";
+}
+.icon-chevron-up:before {
+  content: "\e903";
+}
+.icon-clock:before {
+  content: "\e91b";
+}
+.icon-po:before {
+  content: "\e91c";
+}
 .icon-icon01:before {
   content: "\e913";
 }
@@ -91,35 +127,11 @@
 .icon-hand:before {
   content: "\e905";
 }
-.icon-circle:before {
-  content: "\e90a";
+.icon-play:before {
+  content: "\e91d";
 }
-.icon-chevron-down:before {
-  content: "\e900";
-}
-.icon-chevron-left:before {
-  content: "\e901";
-}
-.icon-chevron-right:before {
-  content: "\e902";
-}
-.icon-chevron-up:before {
-  content: "\e903";
-}
-.icon-add:before {
-  content: "\e145";
-}
-.icon-close:before {
-  content: "\e5cd";
-}
-.icon-dehaze:before {
-  content: "\e3c7";
-}
-.icon-drag_handle:before {
-  content: "\e25d";
-}
-.icon-remove:before {
-  content: "\e15b";
+.icon-pause:before {
+  content: "\e91e";
 }
 .icon-asterisk:before {
   content: "\f069";
@@ -176,6 +188,75 @@ $cent_gray: rgba(150, 150, 150, 1.00);
   @include clearfix();
   background-color: rgba(0, 0, 0, 0.3);
   position: relative;
+
+  .black_bg {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    .wo_boxs {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      width: 100%;
+      height: 100%;
+
+      .wo_box {
+        width:280px;
+        background:white;
+        @include border-radius(3px);
+        text-align: left;
+        padding: 15px;
+        @include clearfix();
+        position: relative;
+
+        .wo_close {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          background-color: black;
+          color: white;
+          font-size: 1rem;
+          @include border-radius(20px);
+          border: 1px solid white;
+          outline: 0;
+          padding: 0;
+        }
+
+        .wo_icon {
+          display: inline-block;
+          color: white;
+          background-color: red;
+          font-size: 2rem;
+          padding-top: 10px;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          @include border-radius(20px);
+          float: left;
+          margin-right: 10px;
+        }
+
+        .wo_type {
+          display: inline-block;
+          width: calc(100% - 50px);
+          color: $deep_gray;
+          font-size: 1rem;
+          float: left;
+        }
+      }
+    }
+  }
 
   // 最上面
   .top_boxs {
@@ -472,6 +553,16 @@ $cent_gray: rgba(150, 150, 150, 1.00);
               padding-top: 3px;
               padding-right: 3px;
             }
+
+            &.testing {
+              &:before {
+                display: inline-block;
+                content: '\e91b';
+                font-family: 'icomoon';
+                padding-right: 10px;
+                padding-top: 3px;
+              }
+            }
           }
 
           .time_mark {
@@ -543,6 +634,42 @@ $cent_gray: rgba(150, 150, 150, 1.00);
     left: 0;
     bottom: 0;
     @include clearfix();
+
+    .down_TL, .down_TR {
+      display: inline-block;
+      width: 70px;
+      height: 30px;
+      line-height: 30px;
+      
+      .T_icon {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        background-color: $deep_gray;
+        color: white;
+
+        &:active {
+          background-color: $deep_blue;
+        }
+
+        &:nth-child(1) {
+          float: left;
+        } 
+
+        &:nth-child(2) {
+          float: right;
+        }
+      }
+    }
+
+    .down_TL {
+      float: left;
+    }
+
+    .down_TR {
+      float: right;
+    }
 
     .down_L, .down_R {
       display: inline-block;

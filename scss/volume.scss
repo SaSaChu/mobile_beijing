@@ -408,6 +408,16 @@ $cent_gray: rgba(150, 150, 150, 1.00);
             color: $deep_gray !important;
             box-shadow: 0px 0px 0px 2px red;   
           }
+
+          &.test_q {
+            color: red !important;
+            box-shadow: 0px 0px 0px 2px red;  
+          }
+
+          &.bgred {
+            display: inline-block;
+            background-color: rgba(228, 11, 33, .3);
+          }
         }
 
         + * {
@@ -578,8 +588,33 @@ $cent_gray: rgba(150, 150, 150, 1.00);
             }
           }
         }
-      }
+      }      
     }
+
+    .ing_title, .ing_date, .ing_name, .ing_con {
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 10px;
+
+      }
+
+      .ing_title {
+        font-size: 1.2rem;
+        color: red;
+      }
+      .ing_date {
+        font-size: 1rem;
+        color: red;
+      }
+      .ing_name {
+        font-size: 1rem;
+        color: $deep_blue;
+        font-weight: 600;
+      }
+      .ing_con {
+        font-size: 1rem;
+        color: $deep_gray;
+      }
   }
 }
 
@@ -594,6 +629,23 @@ $cent_gray: rgba(150, 150, 150, 1.00);
 
   .vo_qu_boxs {
     @include clearfix();
+
+    .ing_mark {
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+      color: $deep_gray;
+      font-size: 1rem;
+      padding: 0 10px;
+
+      input {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        margin-top: 3px;
+      }
+    }
 
     .vo_qu_box {
       display: inline-block;
@@ -665,6 +717,8 @@ $cent_gray: rgba(150, 150, 150, 1.00);
         color: white;
         background-color: $deep_blue;
         @include transition(all .3s);
+
+        margin-bottom: 10px;
 
         &:hover, &:active {
           background-color: $light_blue;
